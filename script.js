@@ -12,7 +12,9 @@ $(".AddNoteButton").on("click", function () {
     let title = $("#title").val()
     let text = $("#text").val()
     if(title == ""|| text == ""){
-      alertify.error();
+      alertify.error("Enter the text")
+      ;
+      return
     }
     let note = {
         title,

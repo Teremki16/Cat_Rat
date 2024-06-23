@@ -2,106 +2,215 @@
   margin: 0;
   padding: 0;
 }
-body{
+
+body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(https://i1.adis.ws/i/canon/future_of_forests_header_16x9_dc14bbe1e35040f79bf566eedaf5c8f7?$hero-header-half-16by9-dt$);
-  background-size: auto;
+
+  background-image: url(https://img.freepik.com/premium-vector/seamless-repeating-pattern-forest_209002-166.jpg);
+
+  /* background-size:cover;  */
 }
-.LogoName{
- font-size: 40px;
- color: rgb(0, 0, 0);
-  background-color:  rgb(131, 198, 129);
-  padding: 12px 18px ;
-  border-radius: 0 0 15px 15px;
+
+.LogoName {
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(167, 235, 159);
+  padding: 12px 18px;
+  border-radius: 15px;
+  margin: 20px;
 
   font-family: "Nunito", sans-serif;
 }
-.Buttons{
-   display: flex;
+
+.Buttons {
+  display: flex;
   justify-content: space-around;
+  gap: 30px;
+  margin: 20px;
+ 
   
-  padding: 10px;
-  /* gap: 0px; */
+
 }
-.AddNoteButton, .ClearListButton{
+
+
+.AddNoteButton,
+.ClearListButton {
   width: 14vw;
   height: 13vh;
   font-size: 30px;
   background-color: rgba(0, 0, 0, 0.6);
-  border: 1px solid black; /*for dev*/
+  border: 1px solid black;
+  /*for dev*/
   border-radius: 5px;
   color: blanchedalmond;
-
-}
-.Todo{
-  display: flex;
-flex-direction: column;
-
-}
-.Todo .noteTitleText::placeholder, 
-.Todo .noteTextText::placeholder
-{
-  text-align: center;
+ max-width: 75px;
+  max-height: 75px;
   
 }
 
-.Todo .noteTitle, .Todo .noteText{
-border-radius: 10px;
+.Todo {
+  display: flex;
+  flex-direction: column;
+
 }
-.noteTitleText, .noteTextText{
+
+.Todo .noteTitleText::placeholder,
+.Todo .noteTextText::placeholder {
+  text-align: center;
+
+}
+
+.Todo .noteTitle,
+.Todo .noteText {
+  border-radius: 10px;
+}
+
+.noteTitleText,
+.noteTextText {
   height: 5vh;
   border-radius: 7px;
   margin-bottom: 10px;
+ padding: 10px;
 }
 
-.Notes{
+.Notes {
   margin-top: 10px;
-  border: 3px solid black; /*for dev*/
+  
+  /*for dev*/
   border-radius: 7px;
-  
+ display: flex;
+ flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
 }
-.Note{
-  border: 1px solid black; /*for dev*/
+
+.Note {
+  border: 1px solid rgb(32, 42, 30);
+  /*for dev*/
   display: flex;
-  
-  margin: 10px 20px;
+
+  margin: 30px;
   padding: 11px;
-  background-color: rgb(114, 186, 113);
+  background-color: rgb(151, 224, 150);
   border-radius: 10px;
   gap: 10px;
-  font-family: "Caveat", cursive;
+  font-family: "Caveat", ;
+  position: relative;
 }
-.Note .NoteTexts{
+
+.Note .NoteTexts {
   display: flex;
   flex-direction: column;
   align-items: center;
- 
+  justify-content: space-between;
+  flex-grow: 1;
+
 }
-.Note .NoteButtons{
+
+.Note .NoteButtons {
   display: flex;
   flex-direction: column;
+
   gap: 7px;
   border-left: 1px solid black;
   padding: 0 8px 0;
-  
+
 }
-.Note .NoteText{
-  border-top: 1px solid black;
-  
+
+.Note .NoteText {
+ flex-grow: 1;
+  font-size: 16px;
+  overflow-x: hidden;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 255px;
+ 
 }
- .RedactingButton, .DeleteButton, .CompleteButton{
+
+.Note .NoteTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 255px;
+ 
+}
+
+
+.RedactingButton,
+.DeleteButton,
+.CompleteButton {
   background-color: rgba(0, 0, 0, 0.6);
   color: blanchedalmond;
   border-radius: 5px;
   padding: 8px;
- }
+}
+
+h5 {
+  font-size: 8px;
+  position: absolute;
+  top: 3px;
+  left: 10px;
+}
+
+.on {
+  background-color: rgba(104, 144, 103, 0.507);
+}
 
 
+.overlay {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
 
+.win {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 25px;
+  flex-direction: column;
+  width: 50%;
+}
 
+.check {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  align-self: center;
+  background-color: rgb(126, 173, 125);
+}
 
+textarea {
+  resize: none;
+}
 
+#t {
+  border-radius: 5px;
+  padding: 10px;
+}
 
+#i {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.over{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:rgb(126, 173, 125);
+  border: 1px solid black;
+  padding: 12px 18px;
+  border-radius: 15px;
+  margin: 20px;
+}
+
+.noteTitle{
+  padding: 10px;
+}

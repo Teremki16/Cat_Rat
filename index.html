@@ -1,62 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Підключення стилів -->
-    <link rel="stylesheet" href="style.css" />
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css' integrity='sha512-KOWhIs2d8WrPgR4lTaFgxI35LLOp5PRki/DxQvb7mlP29YZ5iJ5v8tiLWF7JLk5nDBlgPP1gHzw96cZ77oD7zQ==' crossorigin='anonymous'/>
-        <!-- Підключення локального скрипта -->
-    <script src="script.js" defer ></script>
-    <!-- Підключення jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <!-- Підключення стилів -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css'
+    integrity='sha512-KOWhIs2d8WrPgR4lTaFgxI35LLOp5PRki/DxQvb7mlP29YZ5iJ5v8tiLWF7JLk5nDBlgPP1gHzw96cZ77oD7zQ=='
+    crossorigin='anonymous' />
+  <!-- Підключення локального скрипта -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="leaf.js" defer></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
 
-    <title>Document</title>
-  </head>
-  <body>
-    <h1 class="LogoName">Mega To Do List</h1>
-      <div class="Todo">
-        <div class="Buttons">
-          <button class="AddNoteButton"><i class="far fa-calendar-plus"></i></button>
-         
-          <button class="ClearListButton"><i class="fa-solid fa-trash-can"></i></button>         
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet"> -->
+
+  <title>Document</title>
+</head>
+
+<body>
+  <h1 class="LogoName">To Do List</h1>
+  <div class="Todo">
+    <div class="Buttons">
+      <button class="AddNoteButton"><i class="far fa-calendar-plus"></i></button>
+
+      <button class="ClearListButton" id="clear"><i class="fa-solid fa-trash-can"></i></button>
+    </div>
+    <input type="text" class="noteTitleText" id="title" placeholder="Enter title">
+    <textarea name="" class="noteTextText" id="text" placeholder="Hello World"></textarea>
+
+
+   
+
+
+  </div>
+ <div class="Notes">
+
+      <!-- <div class="Note">
+        <div class="NoteTexts">
+          <h2 class="NoteTitle">Note</h2>
+          <p class="NoteText">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
-        <input type="text" class="noteTitleText" placeholder="Enter title">        
-        <textarea name="" class="noteTextText" placeholder="Hello World"></textarea>
-
-
-        <div class="Notes">
-
-
-          <div class="Note">
-            <div class="NoteTexts">
-            <h2 class="NoteTitle">Note</h2>
-            <p class="NoteText">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-            <div class="NoteButtons">
-              <button class="CompleteButton"><i class="fa-solid fa-square-check"></i></button>
-              <button class="RedactingButton"><i class="fa-solid fa-pencil"></i></button>
-              <button class="DeleteButton"><i class="fa-solid fa-circle-xmark"></i></button>
-            </div>
-            
-          </div>
-
-
+        <div class="NoteButtons">
+          <button class="CompleteButton"><i class="fa-solid fa-square-check"></i></button>
+          <button class="RedactingButton"><i class="fa-solid fa-pencil"></i></button>
+          <button class="DeleteButton"><i class="fa-solid fa-circle-xmark"></i></button>
         </div>
 
+      </div> -->
 
 
-      </div>
-    
+    </div>
 
-    
+<div class="overlay">
+  <div class="win">
+    <h1 class="over">Enter a new value
+    </h1>
+    <input type="text" id="i">
+    <textarea name="" id="t"></textarea>
+    <button onclick="checking()" class="check"><i class="fa-solid fa-check"></i></button>
+  </div>
+</div>
 
-    
-  </body>
+
+
+</body>
+
 </html>
